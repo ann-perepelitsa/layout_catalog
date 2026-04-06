@@ -12,11 +12,27 @@ $catalog-padding-horizontal: 40px;
 $transition-duration: 300ms;
 $header-padding-horizontal: 50px;
 $logo-height: 40px;
+$nav-gap: 20px;
+$nav-link-height: 60px;
+$nav-underline-height: 4px;
+$font-size-sm: 12px;
+$font-size-md: 14px;
+$font-size-lg: 16px;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$line-height-sm: 16px;
+$line-height-md: 18px;
+$card-padding-top: 32px;
 $card-padding-horizontal: 16px;
+$card-image-width: 160px;
+$card-image-height: 134px;
 $card-image-margin-bottom: 40px;
+$card-title-margin-bottom: 4px;
+$card-info-margin-bottom: 24px;
 $card-border-radius: 5px;
 $button-height: 40px;
 $star-size: 16px;
+$star-gap: 4px;
 
 * {
   box-sizing: border-box;
@@ -53,17 +69,17 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 20px;
+    gap: $nav-gap;
   }
 
   &__link {
     display: flex;
     align-items: center;
-    height: 60px;
+    height: $nav-link-height;
     color: $color-primary;
     text-decoration: none;
-    font-size: 12px;
-    font-weight: 500;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
     text-transform: uppercase;
     transition: color $transition-duration;
     position: relative;
@@ -81,7 +97,7 @@ body {
         bottom: 0;
         left: 0;
         right: 0;
-        height: 4px;
+        height: $nav-underline-height;
         background-color: $color-accent;
       }
     }
@@ -116,7 +132,7 @@ body {
 }
 
 .card {
-  padding: 32px $card-padding-horizontal $card-padding-horizontal;
+  padding: $card-padding-top $card-padding-horizontal $card-padding-horizontal;
   background-color: $color-white;
   border: 1px solid $color-border;
   border-radius: $card-border-radius;
@@ -133,17 +149,17 @@ body {
 
   &__image {
     display: block;
-    width: 160px;
-    height: 134px;
+    width: $card-image-width;
+    height: $card-image-height;
     margin: 0 auto $card-image-margin-bottom;
   }
 
   &__title {
-    font-size: 12px;
-    line-height: 18px;
-    font-weight: 500;
+    font-size: $font-size-sm;
+    line-height: $line-height-md;
+    font-weight: $font-weight-medium;
     color: $color-primary;
-    margin: 0 0 4px;
+    margin: 0 0 $card-title-margin-bottom;
     transition: color $transition-duration;
   }
 
@@ -160,7 +176,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 24px;
+    margin-bottom: $card-info-margin-bottom;
   }
 
   &__reviews {
@@ -175,15 +191,15 @@ body {
   }
 
   &__price-label {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: $font-size-sm;
+    line-height: $line-height-md;
     color: $color-secondary;
   }
 
   &__price {
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 700;
+    font-size: $font-size-lg;
+    line-height: $line-height-md;
+    font-weight: $font-weight-bold;
     color: $color-primary;
   }
 
@@ -193,9 +209,9 @@ body {
     justify-content: center;
     height: $button-height;
     text-decoration: none;
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 700;
+    font-size: $font-size-md;
+    line-height: $line-height-sm;
+    font-weight: $font-weight-bold;
     text-transform: uppercase;
     background-color: $color-accent;
     color: $color-white;
@@ -218,7 +234,7 @@ body {
   &__star {
     width: $star-size;
     height: $star-size;
-    margin-right: 4px;
+    margin-right: $star-gap;
     background-image: url('../images/star.svg');
     background-repeat: no-repeat;
     background-position: center;
