@@ -3,12 +3,20 @@ $color-accent: #00acdc;
 $color-hover-title: #34568b;
 $color-white: #fff;
 $color-secondary: #616070;
+$color-border: #f3f3f3;
 $card-width: 200px;
 $gap-horizontal: 48px;
 $gap-vertical: 46px;
 $catalog-padding-vertical: 50px;
 $catalog-padding-horizontal: 40px;
 $transition-duration: 300ms;
+$header-padding-horizontal: 50px;
+$logo-height: 40px;
+$card-padding-horizontal: 16px;
+$card-image-margin-bottom: 40px;
+$card-border-radius: 5px;
+$button-height: 40px;
+$star-size: 16px;
 
 * {
   box-sizing: border-box;
@@ -25,7 +33,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
+  padding: 0 $header-padding-horizontal;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
   &__logo {
@@ -35,7 +43,7 @@ body {
 
   &__logo-image {
     display: block;
-    height: 40px;
+    height: $logo-height;
   }
 }
 
@@ -108,10 +116,10 @@ body {
 }
 
 .card {
-  padding: 32px 16px 16px;
+  padding: 32px $card-padding-horizontal $card-padding-horizontal;
   background-color: $color-white;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
+  border: 1px solid $color-border;
+  border-radius: $card-border-radius;
   transition: transform $transition-duration;
 
   &:hover {
@@ -127,7 +135,7 @@ body {
     display: block;
     width: 160px;
     height: 134px;
-    margin: 0 auto 40px;
+    margin: 0 auto $card-image-margin-bottom;
   }
 
   &__title {
@@ -145,7 +153,7 @@ body {
 
   &__code {
     color: $color-secondary;
-    margin-bottom: 16px;
+    margin-bottom: $card-padding-horizontal;
   }
 
   &__info {
@@ -163,7 +171,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 16px;
+    margin-bottom: $card-padding-horizontal;
   }
 
   &__price-label {
@@ -183,7 +191,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40px;
+    height: $button-height;
     text-decoration: none;
     font-size: 14px;
     line-height: 16px;
@@ -192,7 +200,7 @@ body {
     background-color: $color-accent;
     color: $color-white;
     border: 1px solid $color-accent;
-    border-radius: 5px;
+    border-radius: $card-border-radius;
     transition:
       background-color $transition-duration,
       color $transition-duration;
@@ -208,8 +216,8 @@ body {
   display: flex;
 
   &__star {
-    width: 16px;
-    height: 16px;
+    width: $star-size;
+    height: $star-size;
     margin-right: 4px;
     background-image: url('../images/star.svg');
     background-repeat: no-repeat;
